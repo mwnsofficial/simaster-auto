@@ -287,29 +287,41 @@ proxy-groups:
   interval: '99'
 rule-providers:
   Game:
-    type: file
+    type: http
     behavior: domain
     path: "./rule_provider/rule-game.yaml"
+    url:
+    interval: 3600
   Sosmed:
-    type: file
-    behavior: domain
-    path: "./rule_provider/rule-sosmed.yaml"
-  Stream:
-    type: file
+    type: http
     behavior: domain
     path: "./rule_provider/rule-stream.yaml"
+    url:
+    interval: 3600
+  Stream:
+    type: http
+    behavior: domain
+    path: "./rule_provider/rule-stream.yaml"
+    url:
+    interval: 3600
   Olshop:
-    type: file
+    type: http
     behavior: domain
     path: "./rule_provider/rule-olshop.yaml"
+    url:
+    interval: 3600
   Bank:
-    type: file
+    type: http
     behavior: domain
     path: "./rule_provider/rule-bank.yaml"
+    url:
+    interval: 3600
   Whatsapp:
-    type: file
+    type: http
     behavior: domain
     path: "./rule_provider/rule-whatsapp.yaml"
+    url:
+    interval: 3600
 script:
   code: |
     def main(ctx, metadata):
