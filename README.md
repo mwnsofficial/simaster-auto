@@ -1,2 +1,2 @@
-# simaster-v2.1
+# simaster-auto
 Konfigurasi terbaru untuk openwrt
