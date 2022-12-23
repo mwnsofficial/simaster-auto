@@ -1,9 +1,9 @@
 proxies:
-- name: beri-nama
-  server: id2-trojan.clashmwns.com
+- name: akun2
   type: trojan
+  server: sg1-trojan.bonds.id
   port: 443
-  password: 60d1c550-82ac-11ed-88c9-1239d0255272
+  password: 4905d070-809e-11ed-b598-1239d0255272
   udp: true
-  sni: isi-bugmu.com
+  sni: bugmu.com
   skip-cert-verify: true
