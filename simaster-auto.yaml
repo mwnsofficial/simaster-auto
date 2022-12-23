@@ -150,15 +150,19 @@ dns:
   - "+.cmbimg.com"
 proxy-providers:
   MODEM1:
-    type: file
+    type: http
     path: "./proxy_provider/modem1.yaml"
+    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/proxy_provider/modem1.yaml
+    interval: 3600
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 99
   MODEM2:
-    type: file
-    path: "./proxy_provider/modem2.yaml"
+    type: http
+    path: "./proxy_provider/modem1.yaml"
+    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/proxy_provider/modem1.yaml
+    interval: 3600
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
