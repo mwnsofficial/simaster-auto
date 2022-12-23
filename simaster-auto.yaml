@@ -10,7 +10,6 @@ log-level: info
 ipv6: false
 external-controller: 0.0.0.0:9090
 external-ui: "/usr/share/openclash/ui"
-
 dns:
   enable: true
   ipv6: false
@@ -95,7 +94,119 @@ dns:
     - 1.0.0.1
     - https://dns.google/dns-query
     - tls://dns.google
-
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+  - https://dns.adguard-dns.com:3000/dns-query
+  - tls://dns.adguard-dns.com:3000
+  - 74.82.42.42
+  - 103.133.222.202
+  default-nameserver:
+  - 74.82.42.42
+  - 103.133.222.202
+  fake-ip-filter:
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time-ios.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - "+.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "+.msftconnecttest.com"
+  - "+.msftncsi.com"
+  - msftconnecttest.com
+  - msftncsi.com
+  - localhost.ptlogin2.qq.com
+  - localhost.sec.qq.com
+  - "+.srv.nintendo.net"
+  - "*.n.n.srv.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.*.microsoft.com
+  - "*.*.xboxlive.com"
+  - xbox.*.microsoft.com
+  - xnotify.xboxlive.com
+  - "+.battlenet.com.cn"
+  - "+.wotgame.cn"
+  - "+.wggames.cn"
+  - "+.wowsgame.cn"
+  - "+.wargaming.net"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
+  - "+.stun.*.*.*.*.*"
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - mesu.apple.com
+  - swscan.apple.com
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  - "+.nflxvideo.net"
+  - "*.square-enix.com"
+  - "*.finalfantasyxiv.com"
+  - "*.ffxiv.com"
+  - "*.ff14.sdo.com"
+  - ff.dorado.sdo.com
+  - "*.mcdn.bilivideo.cn"
+  - "+.media.dssott.com"
+  - shark007.net
+  - Mijia Cloud
+  - "+.cmbchina.com"
+  - "+.cmbimg.com"
 proxy-providers:
   MODEM1:
     type: file
@@ -111,7 +222,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 99
-
 proxy-groups:
 - name: SIMASTER-AUTO
   type: select
@@ -234,33 +344,31 @@ proxy-groups:
   - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: '99'
-
 rule-providers:
   Game:
     type: file
-    behavior: classical
+    behavior: domain
     path: "./rule_provider/rule-game.yaml"
   Sosmed:
     type: file
-    behavior: classical
+    behavior: domain
     path: "./rule_provider/rule-sosmed.yaml"
   Stream:
     type: file
-    behavior: classical
+    behavior: domain
     path: "./rule_provider/rule-stream.yaml"
   Olshop:
     type: file
-    behavior: classical
+    behavior: domain
     path: "./rule_provider/rule-olshop.yaml"
   Bank:
     type: file
-    behavior: classical
+    behavior: domain
     path: "./rule_provider/rule-bank.yaml"
   Whatsapp:
     type: file
-    behavior: classical
+    behavior: domain
     path: "./rule_provider/rule-whatsapp.yaml"
-
 script:
   code: |
     def main(ctx, metadata):
@@ -302,19 +410,20 @@ script:
         ctx.log('[Script] SIMASTER-AUTO')
         return "SIMASTER-AUTO"
 rules:
+- DST-PORT,7895,REJECT
+- DST-PORT,7892,REJECT
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - RULE-SET,Game,GAMING
 - RULE-SET,Sosmed,SIMASTER-AUTO
 - RULE-SET,Stream,SIMASTER-AUTO
 - RULE-SET,Olshop,SIMASTER-AUTO
 - RULE-SET,Bank,SIMASTER-AUTO
-- RULE-SET,Whatsappmaster,WHATSAPP
+- RULE-SET,Whatsapp,WHATSAPP
 - GEOIP,ID,SIMASTER-AUTO
 - MATCH,SIMASTER-AUTO
 tun:
   enable: true
   stack: system
-  device: utun
   auto-route: false
   auto-detect-interface: false
   dns-hijack:
@@ -322,5 +431,9 @@ tun:
 profile:
   store-selected: true
   store-fake-ip: true
-secret: simaster
+secret: '123456'
 bind-address: "*"
+experimental:
+  sniff-tls-sni: true
+authentication:
+- Clash:hckUjOup
