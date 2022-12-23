@@ -1,0 +1,9 @@
+proxies:
+- name: beri-nama
+  server: id2-trojan.clashmwns.com
+  type: trojan
+  port: 443
+  password: 60d1c550-82ac-11ed-88c9-1239d0255272
+  udp: true
+  sni: isi-bugmu.com
+  skip-cert-verify: true
