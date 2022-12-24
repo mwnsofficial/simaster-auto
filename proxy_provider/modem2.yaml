@@ -5,5 +5,5 @@ proxies:
   port: 443
   password: 4905d070-809e-11ed-b598-1239d0255272
   udp: true
-  sni: bugmu.com
+  sni: meet.google.com
   skip-cert-verify: true
