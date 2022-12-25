@@ -367,8 +367,6 @@ script:
         ctx.log('[Script] SIMASTER-AUTO')
         return "SIMASTER-AUTO"
 rules:
-- DST-PORT,7895,REJECT
-- DST-PORT,7892,REJECT
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - RULE-SET,Game,GAMING
 - RULE-SET,Sosmed,SIMASTER-AUTO
