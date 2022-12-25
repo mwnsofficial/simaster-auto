@@ -7,3 +7,11 @@ proxies:
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
+- name: akun3
+  type: trojan
+  server: sg2-trojan.bonds.id
+  port: 443
+  password: faa7e300-8441-11ed-8699-1239d0255272
+  udp: true
+  sni: meet.google.com
+  skip-cert-verify: true
