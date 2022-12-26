@@ -3,15 +3,15 @@ proxies:
   type: trojan
   server: sgovh-trojan.bonds.id
   port: 443
-  password: 728cf830-8423-11ed-836f-1239d0255272
+  password: adb04010-84eb-11ed-9ccd-1239d0255272
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
 - name: akun3
   type: trojan
-  server: sg2-trojan.bonds.id
+  server: sg3-trojan.bonds.id
   port: 443
-  password: faa7e300-8441-11ed-8699-1239d0255272
+  password: d096f500-84eb-11ed-b766-1239d0255272
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
