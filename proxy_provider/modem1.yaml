@@ -15,3 +15,11 @@ proxies:
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
+- name: premium-untukmu
+  server: ikubaru2.ujicoba.tech
+  type: trojan
+  port: 443
+  password: ccf7a4da-bee6-4976-b344-f0785b8134ff
+  udp: true
+  sni: meet.google.com
+  skip-cert-verify: true
