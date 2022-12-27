@@ -294,37 +294,37 @@ rule-providers:
     type: http
     behavior: domain
     path: "./rule_provider/rule-game.yaml"
-    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/rule_provider/rule-game.yaml
+    url: https://bit.ly/3X2SvcL
     interval: 3600
   Sosmed:
     type: http
     behavior: domain
-    path: "./rule_provider/rule-stream.yaml"
-    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/rule_provider/rule-sosmed.yaml
+    path: "./rule_provider/rule-sosmed.yaml"
+    url: https://bit.ly/3I4HG5I
     interval: 3600
   Stream:
     type: http
     behavior: domain
     path: "./rule_provider/rule-stream.yaml"
-    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/rule_provider/rule-stream.yaml
+    url: https://bit.ly/3PU6RJP
     interval: 3600
   Olshop:
     type: http
     behavior: domain
     path: "./rule_provider/rule-olshop.yaml"
-    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/rule_provider/rule-olshop.yaml
+    url: https://bit.ly/3Wp85PH
     interval: 3600
   Bank:
     type: http
     behavior: domain
     path: "./rule_provider/rule-bank.yaml"
-    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/rule_provider/rule-bank.yaml
+    url: https://bit.ly/3hN7JUh
     interval: 3600
   Whatsapp:
     type: http
     behavior: domain
     path: "./rule_provider/rule-whatsapp.yaml"
-    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/rule_provider/rule-whatsapp.yaml
+    url: http://bit.ly/3Vkdh6g
     interval: 3600
 script:
   code: |
