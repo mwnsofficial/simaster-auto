@@ -152,7 +152,7 @@ proxy-providers:
   MODEM1:
     type: http
     path: "./proxy_provider/modem1.yaml"
-    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/proxy_provider/modem1.yaml
+    url: https://bit.ly/3PRCNPb
     interval: 3600
     health-check:
       enable: true
@@ -161,7 +161,7 @@ proxy-providers:
   MODEM2:
     type: http
     path: "./proxy_provider/modem2.yaml"
-    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/proxy_provider/modem1.yaml
+    url: http://bit.ly/3hUoj4w
     interval: 3600
     health-check:
       enable: true
