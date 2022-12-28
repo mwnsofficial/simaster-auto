@@ -23,3 +23,6 @@ payload:
   - "+.qq.com"
   - "+.douyin.com"
   - "+.wechat.com"
+
+  # > untuk tambahan saja
+  - "+.arindo.net"
