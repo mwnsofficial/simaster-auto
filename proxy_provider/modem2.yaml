@@ -1,12 +1,4 @@
 proxies:
-- name: akun2
-  type: trojan
-  server: sg1-trojan.bonds.id
-  port: 443
-  password: 140117a0-884a-11ed-b6a8-1239d0255272
-  udp: true
-  sni: meet.google.com
-  skip-cert-verify: true
 - name: akun4
   type: trojan
   server: sg2-trojan.bonds.id
