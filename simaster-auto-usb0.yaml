@@ -386,6 +386,7 @@ tun:
 profile:
   store-selected: true
   store-fake-ip: true
+  tracing: true
 secret: '123456'
 bind-address: "*"
 experimental:
