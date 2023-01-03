@@ -5,7 +5,7 @@ proxies:
   port: 443
   password: 6cd25f40-8b16-11ed-bac3-1239d0255272
   udp: true
-  sni: sg1-trojan.bonds.id
+  sni: io.ruangguru.com
   skip-cert-verify: true
   network: ws
   ws-opts:
@@ -18,5 +18,5 @@ proxies:
   port: 443
   password: a7f83b00-8b16-11ed-84bc-1239d0255272
   udp: true
-  sni: www.udemy.com
+  sni: io.ruangguru.com
   skip-cert-verify: true
