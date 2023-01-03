@@ -9,22 +9,9 @@ proxies:
   skip-cert-verify: true
 - name: akun3
   type: trojan
-  server: akrab.gaaa.my.id
+  server: sg3-trojan.bonds.id
   port: 443
   password: 0444b660-8b17-11ed-b568-1239d0255272
   udp: true
-  sni: sg3-trojan.bonds.id
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /howdy
-    headers:
-      Host: sg3-trojan.bonds.id
-- name: premium-untukmu
-  server: ikubaru2.ujicoba.tech
-  type: trojan
-  port: 443
-  password: ccf7a4da-bee6-4976-b344-f0785b8134ff
-  udp: true
-  sni: io.ruangguru.com
+  sni: meet.google.com
   skip-cert-verify: true
