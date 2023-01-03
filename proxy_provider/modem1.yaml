@@ -5,7 +5,7 @@ proxies:
   port: 443
   password: 177b0e90-8b16-11ed-9252-1239d0255272
   udp: true
-  sni: akrab.gaaa.my.id
+  sni: meet.google.com
   skip-cert-verify: true
 - name: akun3
   type: trojan
@@ -26,5 +26,5 @@ proxies:
   port: 443
   password: ccf7a4da-bee6-4976-b344-f0785b8134ff
   udp: true
-  sni: meet.google.com
+  sni: io.ruangguru.com
   skip-cert-verify: true
