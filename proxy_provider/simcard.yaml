@@ -1,0 +1,9 @@
+proxies:
+- name: ruangguru
+  server: sg1-trojan.bonds.id
+  type: trojan
+  port: 443
+  password: e797c7c0-8e79-11ed-b175-1239d0255272
+  udp: true
+  sni: ruangguru.imgix.net
+  skip-cert-verify: true
