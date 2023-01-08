@@ -153,7 +153,7 @@ dns:
   - "+.cmbchina.com"
   - "+.cmbimg.com"
 proxy-providers:
-  MODEM1:
+  SIMCARD1:
     type: file
     path: "./proxy_provider/AKUN_INDONESIA.yaml"
     interval: 3600
@@ -161,7 +161,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 99
-  MODEM2:
+  SIMCARD2:
     type: file
     path: "./proxy_provider/AKUN_SINGAPURA.yaml"
     interval: 3600
@@ -185,21 +185,24 @@ proxy-groups:
   type: select
   disable-udp: false
   use:
-  - SIMCARD
+  - SIMCARD1
+  - SIMCARD2
   url: http://www.gstatic.com/generate_204
   interval: '99'
 - name: SIMCARD-PING
   type: url-test
   disable-udp: false
   use:
-  - SIMCARD
+  - SIMCARD1
+  - SIMCARD2
   url: http://www.gstatic.com/generate_204
   interval: '99'
 - name: SIMCARD-FALLBACK
   type: fallback
   disable-udp: false
   use:
-  - SIMCARD
+  - SIMCARD1
+  - SIMCARD2
   url: http://www.gstatic.com/generate_204
   interval: '99'
 - name: SIMCARD-LOADBALANCE
@@ -207,7 +210,8 @@ proxy-groups:
   strategy: round-robin
   disable-udp: false
   use:
-  - SIMCARD
+  - SIMCARD1
+  - SIMCARD2
   url: http://www.gstatic.com/generate_204
   interval: '99'
 - name: WHATSAPP
