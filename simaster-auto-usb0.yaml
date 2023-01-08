@@ -84,6 +84,8 @@ dns:
     - "+.*"
   fake-ip-range: 198.18.0.1/16
   nameserver:
+  - 8.8.8.8
+  - 1.1.1.1
   - https://dns.adguard-dns.com:3000/dns-query
   - tls://dns.adguard-dns.com:3000
   - 74.82.42.42
@@ -91,6 +93,8 @@ dns:
   default-nameserver:
   - 74.82.42.42
   - 103.133.222.202
+  - 8.8.8.8
+  - 1.1.1.1
   fake-ip-filter:
   - "*.lan"
   - "*.localdomain"
@@ -149,18 +153,18 @@ dns:
   - "+.cmbchina.com"
   - "+.cmbimg.com"
 proxy-providers:
-  MODEM1:
+  SIMCARD1:
     type: http
-    path: "./proxy_provider/modem1.yaml"
+    path: "./proxy_provider/simcard1.yaml"
     url: https://bit.ly/3PRCNPb
     interval: 3600
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 99
-  MODEM2:
+  SIMCARD2:
     type: http
-    path: "./proxy_provider/modem2.yaml"
+    path: "./proxy_provider/simcard2.yaml"
     url: http://bit.ly/3hUoj4w
     interval: 3600
     health-check:
@@ -172,110 +176,59 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - LOADBALANCE
-  - MODEM1-ONLY
-  - MODEM2-ONLY
+  - SIMCARD-SELECT
+  - SIMCARD-PING
+  - SIMCARD-FALLBACK
+  - SIMCARD-LOADBALANCE
+  - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: '99'
   interface-name: eth0
-- name: LOADBALANCE
-  type: load-balance
-  strategy: round-robin
-  disable-udp: false
-  proxies:
-  - MODEM1-ONLY
-  - MODEM2-ONLY
-  url: http://www.gstatic.com/generate_204
-  interval: '99'
-- name: MODEM1-ONLY
+- name: SIMCARD-SELECT
   type: select
   disable-udp: false
-  proxies:
-  - MODEM1-SELECT
-  - MODEM1-PING
-  - MODEM1-FALLBACK
-  - MODEM1-LOADBALANCE
-  - DIRECT
+  use:
+  - SIMCARD1
+  - SIMCARD2
   url: http://www.gstatic.com/generate_204
   interval: '99'
   interface-name: usb0
-- name: MODEM2-ONLY
-  type: select
+- name: SIMCARD-PING
+  type: url-test
   disable-udp: false
-  proxies:
-  - MODEM2-SELECT
-  - MODEM2-PING
-  - MODEM2-FALLBACK
-  - MODEM2-LOADBALANCE
-  - DIRECT
+  use:
+  - SIMCARD1
+  - SIMCARD2
   url: http://www.gstatic.com/generate_204
   interval: '99'
   interface-name: usb0
-- name: MODEM1-SELECT
-  type: select
+- name: SIMCARD-FALLBACK
+  type: fallback
   disable-udp: false
   use:
-  - MODEM1
+  - SIMCARD1
+  - SIMCARD2
   url: http://www.gstatic.com/generate_204
   interval: '99'
-- name: MODEM2-SELECT
-  type: select
-  disable-udp: false
-  use:
-  - MODEM2
-  url: http://www.gstatic.com/generate_204
-  interval: '99'
-- name: MODEM1-PING
-  type: select
-  disable-udp: false
-  use:
-  - MODEM1
-  url: http://www.gstatic.com/generate_204
-  interval: '99'
-- name: MODEM2-PING
-  type: select
-  disable-udp: false
-  use:
-  - MODEM2
-  url: http://www.gstatic.com/generate_204
-  interval: '99'
-- name: MODEM1-FALLBACK
-  type: select
-  disable-udp: false
-  use:
-  - MODEM1
-  url: http://www.gstatic.com/generate_204
-  interval: '99'
-- name: MODEM2-FALLBACK
-  type: select
-  disable-udp: false
-  use:
-  - MODEM2
-  url: http://www.gstatic.com/generate_204
-  interval: '99'
-- name: MODEM1-LOADBALANCE
+  interface-name: usb0
+- name: SIMCARD-LOADBALANCE
   type: load-balance
   strategy: round-robin
   disable-udp: false
   use:
-  - MODEM1
+  - SIMCARD1
+  - SIMCARD2
   url: http://www.gstatic.com/generate_204
   interval: '99'
-- name: MODEM2-LOADBALANCE
-  type: load-balance
-  strategy: round-robin
-  disable-udp: false
-  use:
-  - MODEM2
-  url: http://www.gstatic.com/generate_204
-  interval: '99'
+  interface-name: usb0
 - name: WHATSAPP
   type: select
   disable-udp: false
   proxies:
-  - LOADBALANCE
-  - MODEM1-ONLY
-  - MODEM2-ONLY
+  - SIMCARD-SELECT
+  - SIMCARD-PING
+  - SIMCARD-FALLBACK
+  - SIMCARD-LOADBALANCE
   - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: '99'
@@ -283,9 +236,10 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - LOADBALANCE
-  - MODEM1-ONLY
-  - MODEM2-ONLY
+  - SIMCARD-SELECT
+  - SIMCARD-PING
+  - SIMCARD-FALLBACK
+  - SIMCARD-LOADBALANCE
   - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: '99'
@@ -293,37 +247,37 @@ rule-providers:
   Game:
     type: http
     behavior: domain
-    path: "./rule_provider/rule-game.yaml"
+    path: ./rule_provider/rule-game.yaml
     url: https://bit.ly/3X2SvcL
     interval: 3600
   Sosmed:
     type: http
     behavior: domain
-    path: "./rule_provider/rule-sosmed.yaml"
+    path: ./rule_provider/rule-sosmed.yaml
     url: https://bit.ly/3I4HG5I
     interval: 3600
   Stream:
     type: http
     behavior: domain
-    path: "./rule_provider/rule-stream.yaml"
+    path: ./rule_provider/rule-stream.yaml
     url: https://bit.ly/3PU6RJP
     interval: 3600
   Olshop:
     type: http
     behavior: domain
-    path: "./rule_provider/rule-olshop.yaml"
+    path: ./rule_provider/rule-olshop.yaml
     url: https://bit.ly/3Wp85PH
     interval: 3600
   Bank:
     type: http
     behavior: domain
-    path: "./rule_provider/rule-bank.yaml"
+    path: ./rule_provider/rule-bank.yaml
     url: https://bit.ly/3hN7JUh
     interval: 3600
   Whatsapp:
     type: http
     behavior: domain
-    path: "./rule_provider/rule-whatsapp.yaml"
+    path: ./rule_provider/rule-whatsapp.yaml
     url: http://bit.ly/3Vkdh6g
     interval: 3600
 script:
@@ -386,7 +340,6 @@ tun:
 profile:
   store-selected: true
   store-fake-ip: true
-  tracing: true
 secret: '123456'
 bind-address: "*"
 experimental:
