@@ -15,7 +15,6 @@ proxies:
   udp: true
   sni: investors.spotify.com
   skip-cert-verify: true
-proxies:
 - name: trojanC
   server: sg3-trojan.bonds.id
   type: trojan
