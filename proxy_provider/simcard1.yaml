@@ -1,5 +1,5 @@
 proxies:
-- name: akun1
+- name: akunA
   type: trojan
   server: sgovh-trojan.bonds.id
   port: 443
@@ -7,7 +7,7 @@ proxies:
   udp: true
   sni: investors.spotify.com
   skip-cert-verify: true
-- name: akun3
+- name: akunB
   type: trojan
   server: sg3-trojan.bonds.id
   port: 443
