@@ -15,6 +15,15 @@ proxies:
   udp: true
   sni: investors.spotify.com
   skip-cert-verify: true
+proxies:
+- name: trojanC
+  server: sg3-trojan.bonds.id
+  type: trojan
+  port: 443
+  password: 4c053300-937c-11ed-a8bd-1239d0255272
+  udp: true
+  sni: meet.google.com
+  skip-cert-verify: true
 - name: vmess1
   server: 141.193.213.20
   port: 443
