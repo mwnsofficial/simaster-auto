@@ -155,8 +155,8 @@ dns:
 proxy-providers:
   SIMCARD:
     type: http
-    path: ./proxy_provider/simcard2.yaml
-    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/proxy_provider/simcard2.yaml
+    path: ./proxy_provider/simcard.yaml
+    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/proxy_provider/simcard.yaml
     interval: 3600
     health-check:
       enable: true
