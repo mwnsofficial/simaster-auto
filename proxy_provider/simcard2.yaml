@@ -1,5 +1,5 @@
 proxies:
-- name: akunC
+- name: khususA
   type: trojan
   server: sg1-trojan.bonds.id
   port: 443
@@ -7,7 +7,7 @@ proxies:
   udp: true
   sni: note0.microsoft.com
   skip-cert-verify: true
-- name: akunD
+- name: khususB
   type: trojan
   server: sg2-trojan.bonds.id
   port: 443
