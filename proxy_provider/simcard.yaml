@@ -24,7 +24,7 @@ proxies:
   sni: meet.google.com
   skip-cert-verify: true
 - name: vmess1
-  server: 141.193.213.20
+  server: note0.microsoft.com
   port: 443
   type: vmess
   uuid: 30e7cd06-e836-4ac2-98be-4ea93217230a
