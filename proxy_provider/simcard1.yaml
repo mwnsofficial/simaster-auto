@@ -5,7 +5,7 @@ proxies:
   port: 443
   password: 177b0e90-8b16-11ed-9252-1239d0255272
   udp: true
-  sni: investors.spotify.com
+  sni: meet.google.com
   skip-cert-verify: true
 - name: akunB
   type: trojan
