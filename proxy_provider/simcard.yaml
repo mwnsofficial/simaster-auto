@@ -1,5 +1,5 @@
 proxies:
-- name: trojanA
+- name: ovh
   server: sgovh-trojan.bonds.id
   type: trojan
   port: 443
@@ -7,7 +7,7 @@ proxies:
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
-- name: trojanB
+- name: sghe2
   server: sg2-trojan.bonds.id
   type: trojan
   port: 443
@@ -15,7 +15,7 @@ proxies:
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
-- name: trojanC
+- name: sghe3
   server: sg3-trojan.bonds.id
   type: trojan
   port: 443
