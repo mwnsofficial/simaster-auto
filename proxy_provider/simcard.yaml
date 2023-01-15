@@ -5,7 +5,7 @@ proxies:
   port: 443
   password: e797c7c0-8e79-11ed-b175-1239d0255272
   udp: true
-  sni: app.ruangguru.com
+  sni: meet.google.com
   skip-cert-verify: true
 - name: trojanB
   server: sg1-trojan.bonds.id
@@ -13,7 +13,7 @@ proxies:
   port: 443
   password: e797c7c0-8e79-11ed-b175-1239d0255272
   udp: true
-  sni: investors.spotify.com
+  sni: meet.google.com
   skip-cert-verify: true
 - name: trojanC
   server: sg3-trojan.bonds.id
@@ -40,7 +40,7 @@ proxies:
       Host: sg01-vmess.realssh.xyz
   udp: true
 - name: vmess2
-  server: 172.67.199.34
+  server: note0.microsoft.com
   port: 443
   type: vmess
   uuid: 9e94f30b-8796-4492-a80d-5c9d537652d7
@@ -56,7 +56,7 @@ proxies:
       Host: sgo-2.herbalv2ray.me
   udp: true
 - name: vmess3
-  server: 141.193.213.20
+  server: note0.microsoft.com
   port: 443
   type: vmess
   uuid: 1b6818e6-8ca2-11ed-aedb-06b3e42ba9c8
@@ -72,7 +72,7 @@ proxies:
       Host: wjvit.fastervpn.my.id
   udp: true
 - name: vmess4
-  server: 141.193.213.20
+  server: note0.microsoft.com
   port: 443
   type: vmess
   uuid: 29607abb-2907-4923-9779-97195e39da01
@@ -88,7 +88,7 @@ proxies:
       Host: sgo-2.herbalv2ray.me
   udp: true
 - name: vmess5
-  server: 141.193.213.20
+  server: note0.microsoft.com
   port: 443
   type: vmess
   uuid: 3d78ccb8-6da3-4945-9610-712cec194897
@@ -104,7 +104,7 @@ proxies:
       Host: sg-ray.ipservers.xyz
   udp: true
 - name: vmess6
-  server: 141.193.213.20
+  server: note0.microsoft.com
   port: 443
   type: vmess
   uuid: 01a57038-a105-4490-b2b4-c5336c86956f
@@ -120,7 +120,7 @@ proxies:
       Host: do1.kitu.xyz
   udp: true
 - name: vmess7
-  server: 141.193.213.20
+  server: note0.microsoft.com
   port: 443
   type: vmess
   uuid: 5da8f24d-d909-4c70-ab86-7d79f7fb294e
