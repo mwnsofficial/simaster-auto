@@ -27,33 +27,33 @@ proxies:
   server: note0.microsoft.com
   port: 443
   type: vmess
-  uuid: 30e7cd06-e836-4ac2-98be-4ea93217230a
+  uuid: 04dcf8df-75b1-4298-a57e-cdc55d7a0b70
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: sg01-vmess.realssh.xyz
+  servername: sgovh1.v2rayserv.com
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: sg01-vmess.realssh.xyz
+      Host: sgovh1.v2rayserv.com
   udp: true
 - name: vmess2
   server: note0.microsoft.com
   port: 443
   type: vmess
-  uuid: 9e94f30b-8796-4492-a80d-5c9d537652d7
+  uuid: 04dcf8df-75b1-4298-a57e-cdc55d7a0b70
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: sgo-2.herbalv2ray.me
+  servername: sgovh1.v2rayserv.com
   network: ws
   ws-opts:
-    path: /herbalserver
+    path: /vmess
     headers:
-      Host: sgo-2.herbalv2ray.me
+      Host: sgovh1.v2rayserv.com
   udp: true
 - name: vmess3
   server: note0.microsoft.com
