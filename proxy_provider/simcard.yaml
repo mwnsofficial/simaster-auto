@@ -1,9 +1,9 @@
 proxies:
 - name: ovh
-  server: sgovh-trojan.bonds.id
+  server: sg1-trojan.bonds.id
   type: trojan
   port: 443
-  password: dec0ae30-94e5-11ed-a1b2-1239d0255272
+  password: a3862110-9dab-11ed-b047-1239d0255272
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
@@ -11,7 +11,7 @@ proxies:
   server: sg2-trojan.bonds.id
   type: trojan
   port: 443
-  password: 971eb340-94e5-11ed-a842-1239d0255272
+  password: 02587a40-9dac-11ed-b2ef-1239d0255272
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
@@ -19,7 +19,7 @@ proxies:
   server: sg3-trojan.bonds.id
   type: trojan
   port: 443
-  password: c3077290-94e5-11ed-b372-1239d0255272
+  password: dcc54cb0-9dab-11ed-a7a8-1239d0255272
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
