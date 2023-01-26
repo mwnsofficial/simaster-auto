@@ -9,9 +9,9 @@ proxies:
   skip-cert-verify: true
 - name: akunB
   type: trojan
-  server: sg3-trojan.bonds.id
+  server: sg2-trojan.bonds.id
   port: 443
-  password: 0444b660-8b17-11ed-b568-1239d0255272
+  password: 02587a40-9dac-11ed-b2ef-1239d0255272
   udp: true
   sni: io.ruangguru.com
   skip-cert-verify: true
