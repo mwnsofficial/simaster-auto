@@ -1,9 +1,17 @@
 proxies:
+- name: sghe6
+  server: sg6-trojan.bonds.id
+  type: trojan
+  port: 443
+  password: 83fe78c0-a0e7-11ed-bfe6-1239d0255272
+  udp: true
+  sni: meet.google.com
+  skip-cert-verify: true
 - name: sghe1
   server: sg1-trojan.bonds.id
   type: trojan
   port: 443
-  password: a3862110-9dab-11ed-b047-1239d0255272
+  password: a83e5ee0-a0e6-11ed-81eb-1239d0255272
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
@@ -11,7 +19,7 @@ proxies:
   server: sg2-trojan.bonds.id
   type: trojan
   port: 443
-  password: 02587a40-9dac-11ed-b2ef-1239d0255272
+  password: e1edc1c0-a0e6-11ed-9868-1239d0255272
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
@@ -19,7 +27,7 @@ proxies:
   server: sg3-trojan.bonds.id
   type: trojan
   port: 443
-  password: dcc54cb0-9dab-11ed-a7a8-1239d0255272
+  password: 80230ca0-a0e6-11ed-bf13-1239d0255272
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
