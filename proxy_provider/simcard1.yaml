@@ -11,7 +11,7 @@ proxies:
   type: trojan
   server: sg2-trojan.bonds.id
   port: 443
-  password: e1edc1c0-a0e6-11ed-9868-1239d0255272
+  password: 853e7ea0-a93d-11ed-b3d4-1239d0255272
   udp: true
   sni: io.ruangguru.com
   skip-cert-verify: true
