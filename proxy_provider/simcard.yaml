@@ -1,35 +1,19 @@
 proxies:
-- name: sghe6
-  server: sg6-trojan.bonds.id
+- name: akunA
   type: trojan
+  server: sg-3.test3.net
   port: 443
-  password: 83fe78c0-a0e7-11ed-bfe6-1239d0255272
+  password: 5693db20-a93e-11ed-b9a0-1239d0255272
   udp: true
-  sni: meet.google.com
+  sni: app.ruangguru.com
   skip-cert-verify: true
-- name: sghe1
-  server: sg1-trojan.bonds.id
+- name: akunB
   type: trojan
-  port: 443
-  password: a83e5ee0-a0e6-11ed-81eb-1239d0255272
-  udp: true
-  sni: meet.google.com
-  skip-cert-verify: true
-- name: sghe2
   server: sg2-trojan.bonds.id
-  type: trojan
   port: 443
-  password: e1edc1c0-a0e6-11ed-9868-1239d0255272
+  password: 853e7ea0-a93d-11ed-b3d4-1239d0255272
   udp: true
-  sni: meet.google.com
-  skip-cert-verify: true
-- name: sghe3
-  server: sg3-trojan.bonds.id
-  type: trojan
-  port: 443
-  password: 80230ca0-a0e6-11ed-bf13-1239d0255272
-  udp: true
-  sni: meet.google.com
+  sni: io.ruangguru.com
   skip-cert-verify: true
 - name: vmess1
   server: note0.microsoft.com
