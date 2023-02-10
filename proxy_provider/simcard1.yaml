@@ -1,9 +1,9 @@
 proxies:
 - name: akunA
   type: trojan
-  server: sg6-trojan.bonds.id
+  server: sg-3.test3.net
   port: 443
-  password: 83fe78c0-a0e7-11ed-bfe6-1239d0255272
+  password: 5693db20-a93e-11ed-b9a0-1239d0255272
   udp: true
   sni: app.ruangguru.com
   skip-cert-verify: true
