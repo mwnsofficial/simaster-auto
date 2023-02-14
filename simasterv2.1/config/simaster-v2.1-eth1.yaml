@@ -206,7 +206,7 @@ dns:
   - "+.dns.google"
 proxy-providers:
   Booster1:
-    type: http
+    type: file
     path: "./proxy_provider/simcard1.yaml"
     url: http://bit.ly/40PyUPL
     interval: 3600
@@ -215,7 +215,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   Booster2:
-    type: http
+    type: file
     path: "./proxy_provider/simcard2.yaml"
     url: http://bit.ly/3YOKmtk
     interval: 3600
@@ -234,7 +234,7 @@ proxy-groups:
   - LOADBALANCE
   url: http://www.gstatic.com/generate_204
   interval: '99'
-  interface-name: eth0
+  interface-name: wlan0
 - name: MANUAL
   type: select
   disable-udp: false
@@ -279,7 +279,7 @@ proxy-groups:
   - M1-LOADBALANCE
   url: http://www.gstatic.com/generate_204
   interval: '99'
-  interface-name: eth1
+  interface-name: eth0
 - name: MODEM2
   type: select
   disable-udp: false
@@ -290,9 +290,9 @@ proxy-groups:
   - M2-LOADBALANCE
   url: http://www.gstatic.com/generate_204
   interval: '99'
-  interface-name: eth1
+  interface-name: eth0
 - name: M1-MANUAL
-  type: url-test
+  type: select
   disable-udp: false
   use:
   - Booster1
@@ -300,7 +300,7 @@ proxy-groups:
   interval: '99'
   tolerance: '99'
 - name: M2-MANUAL
-  type: url-test
+  type: select
   disable-udp: false
   use:
   - Booster2
@@ -366,7 +366,7 @@ proxy-groups:
   - M2-FAILOVER
   - M2-LOADBALANCE
   - DIRECT
-  interface-name: eth1
+  interface-name: eth0
 - name: SOSMED
   type: select
   disable-udp: false
@@ -380,7 +380,7 @@ proxy-groups:
   - M2-FAILOVER
   - M2-LOADBALANCE
   - DIRECT
-  interface-name: eth1
+  interface-name: eth0 
 - name: STREAMING
   type: select
   disable-udp: false
@@ -394,7 +394,7 @@ proxy-groups:
   - M2-FAILOVER
   - M2-LOADBALANCE
   - DIRECT
-  interface-name: eth1
+  interface-name: eth0
 - name: OLSHOP
   type: select
   disable-udp: false
@@ -408,7 +408,7 @@ proxy-groups:
   - M2-FAILOVER
   - M2-LOADBALANCE
   - DIRECT
-  interface-name: eth1
+  interface-name: eth0
 - name: BANK
   type: select
   disable-udp: false
@@ -422,7 +422,7 @@ proxy-groups:
   - M2-FAILOVER
   - M2-LOADBALANCE
   - DIRECT
-  interface-name: eth1
+  interface-name: eth0
 - name: CHATTING
   type: select
   disable-udp: false
@@ -436,7 +436,7 @@ proxy-groups:
   - M2-FAILOVER
   - M2-LOADBALANCE
   - DIRECT
-  interface-name: eth1
+  interface-name: eth0
 - name: KRYPTO
   type: select
   disable-udp: false
@@ -449,7 +449,7 @@ proxy-groups:
   - M2-AUTO
   - M2-FAILOVER
   - M2-LOADBALANCE
-  interface-name: eth1
+  interface-name: eth0
 rule-providers:
   Boost-Game:
     type: http
