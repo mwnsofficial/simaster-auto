@@ -1,10 +1,17 @@
 proxies
 - name: ISIKAN NAMA
+  type: vmess
   server: ISIKAN IP/HOST
   port: 443
-  type: trojan
-  password: PASSWORD
-  flow: xtls-rprx-direct
-  skip-cert-verify: true
-  sni: ISIKAN BUG
+  uuid: ISIKAN UUID
+  alterId: 0
+  cipher: auto
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ISIKAN BUG
+  network: ws
+  ws-opts:
+    path: /PATH
+    headers:
+      Host: ISIKAN BUG
