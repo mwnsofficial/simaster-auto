@@ -206,7 +206,7 @@ dns:
   - "+.*"
 proxy-providers:
   Trojan-GFW:
-    type: file
+    type: http
     path: "./proxy_provider/trojan-gfw.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/trojan-gfw.yaml
     interval: 3600
@@ -215,7 +215,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   Trojan-GO:
-    type: file
+    type: http
     path: "./proxy_provider/trojan-go.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/trojan-go.yaml
     interval: 3600
@@ -224,7 +224,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   Trojan-GRPC:
-    type: file
+    type: http
     path: "./proxy_provider/trojan-grpc.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/trojan-grpc.yaml
     interval: 3600
@@ -233,7 +233,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   Trojan-XTLS:
-    type: file
+    type: http
     path: "./proxy_provider/trojan-xtls.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/trojan-xtls.yaml
     interval: 3600
@@ -242,7 +242,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   Trojan-WS:
-    type: file
+    type: http
     path: "./proxy_provider/trojan-ws.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/trojan-ws.yaml
     interval: 3600
@@ -251,7 +251,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   Vmess-WS:
-    type: file
+    type: http
     path: "./proxy_provider/vmess-ws.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/vmess-ws.yaml
     interval: 3600
@@ -260,7 +260,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   Vmess-WS-TLS:
-    type: file
+    type: http
     path: "./proxy_provider/vmess-ws-tls.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/vmess-ws-tls.yaml
     interval: 3600
@@ -269,7 +269,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   Vmess-WS-NONTLS:
-    type: file
+    type: http
     path: "./proxy_provider/vmess-ws-nontls.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/vmess-ws-nontls.yaml
     interval: 3600
@@ -278,7 +278,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   Vmess-GRPC:
-    type: file
+    type: http
     path: "./proxy_provider/vmess-grpc.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/vmess-grpc.yaml
     interval: 3600
@@ -287,7 +287,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   Shadowsocks:
-    type: file
+    type: http
     path: "./proxy_provider/shadowsocks.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/shadowsocks.yaml
     interval: 3600
@@ -296,7 +296,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   Shadowsocks-OBFS:
-    type: file
+    type: http
     path: "./proxy_provider/shadowsocks-obfs.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/shadowsocks-obfs.yaml
     interval: 3600
@@ -305,7 +305,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
   ShadowsocksR:
-    type: file
+    type: http
     path: "./proxy_provider/shadowsocksr.yaml"
     url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/simaster-v2.2/proxy_provider/shadowsocksr.yaml
     interval: 3600
