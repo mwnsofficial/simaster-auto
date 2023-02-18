@@ -1,0 +1,9 @@
+proxies
+- name: KASIH NAMA
+  type: trojan
+  server: ISIKAN IP/HOST
+  port: 443
+  password: PASSWORD
+  udp: true
+  sni: BUGSNI.COM
+  skip-cert-verify: true
