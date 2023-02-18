@@ -1,0 +1,10 @@
+proxies
+- name: ISIKAN NAMA
+  server: ISIKAN IP/HOST
+  port: 443
+  type: trojan
+  password: PASSWORD
+  flow: xtls-rprx-direct
+  skip-cert-verify: true
+  sni: ISIKAN BUG
+  udp: true
