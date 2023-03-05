@@ -1,145 +1,17 @@
 proxies:
-- name: akunA
-  type: trojan
-  server: sg-3.test3.net
-  port: 443
-  password: 5693db20-a93e-11ed-b9a0-1239d0255272
-  udp: true
-  sni: app.ruangguru.com
-  skip-cert-verify: true
-- name: akunB
+- name: akun1
   type: trojan
   server: sg2-trojan.bonds.id
   port: 443
-  password: 853e7ea0-a93d-11ed-b3d4-1239d0255272
+  password: 4dfe3db0-bb1f-11ed-ab95-1239d0255272
   udp: true
-  sni: io.ruangguru.com
+  sni: me.ruangguru.com
   skip-cert-verify: true
-- name: khususA
-  type: trojan
-  server: sg1-trojan.bonds.id
-  port: 443
-  password: fbe42e40-a93d-11ed-b3a0-1239d0255272
-  udp: true
-  sni: meet.google.com
-  skip-cert-verify: true
-- name: khususB
+- name: akun2
   type: trojan
   server: sg3-trojan.bonds.id
   port: 443
-  password: d6fc1e80-a93d-11ed-b059-1239d0255272
+  password: d5e929b0-bb1f-11ed-9609-1239d0255272
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
-- name: vmess1
-  server: note0.microsoft.com
-  port: 443
-  type: vmess
-  uuid: 04dcf8df-75b1-4298-a57e-cdc55d7a0b70
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sgovh1.v2rayserv.com
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: sgovh1.v2rayserv.com
-  udp: true
-- name: vmess2
-  server: note0.microsoft.com
-  port: 443
-  type: vmess
-  uuid: 04dcf8df-75b1-4298-a57e-cdc55d7a0b70
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sgovh1.v2rayserv.com
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: sgovh1.v2rayserv.com
-  udp: true
-- name: vmess3
-  server: note0.microsoft.com
-  port: 443
-  type: vmess
-  uuid: 1b6818e6-8ca2-11ed-aedb-06b3e42ba9c8
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: wjvit.fastervpn.my.id
-  network: ws
-  ws-opts:
-    path: /YOURPATH/v2ray-vmess-ws-tls
-    headers:
-      Host: wjvit.fastervpn.my.id
-  udp: true
-- name: vmess4
-  server: note0.microsoft.com
-  port: 443
-  type: vmess
-  uuid: 29607abb-2907-4923-9779-97195e39da01
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sgo-2.herbalv2ray.me
-  network: ws
-  ws-opts:
-    path: /herbalserver
-    headers:
-      Host: sgo-2.herbalv2ray.me
-  udp: true
-- name: vmess5
-  server: note0.microsoft.com
-  port: 443
-  type: vmess
-  uuid: 3d78ccb8-6da3-4945-9610-712cec194897
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sg-ray.ipservers.xyz
-  network: ws
-  ws-opts:
-    path: /JAGOANSSH/
-    headers:
-      Host: sg-ray.ipservers.xyz
-  udp: true
-- name: vmess6
-  server: note0.microsoft.com
-  port: 443
-  type: vmess
-  uuid: 01a57038-a105-4490-b2b4-c5336c86956f
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: do1.kitu.xyz
-  network: ws
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: do1.kitu.xyz
-  udp: true
-- name: vmess7
-  server: note0.microsoft.com
-  port: 443
-  type: vmess
-  uuid: 5da8f24d-d909-4c70-ab86-7d79f7fb294e
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sg1.createxray.us
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: sg1.createxray.us
-  udp: true
