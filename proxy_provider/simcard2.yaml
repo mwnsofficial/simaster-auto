@@ -1,17 +1,9 @@
 proxies:
-- name: khususA
-  type: trojan
-  server: sg1-trojan.bonds.id
-  port: 443
-  password: fbe42e40-a93d-11ed-b3a0-1239d0255272
-  udp: true
-  sni: meet.google.com
-  skip-cert-verify: true
-- name: khususB
+- name: akun2
   type: trojan
   server: sg3-trojan.bonds.id
   port: 443
-  password: d6fc1e80-a93d-11ed-b059-1239d0255272
+  password: d5e929b0-bb1f-11ed-9609-1239d0255272
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
