@@ -15,3 +15,19 @@ proxies:
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
+- name: Vmess WS
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 6988ada2-c510-487e-818c-e801fdc46a88
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: sg6.v2rayserv.com
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: sg6.v2rayserv.com
