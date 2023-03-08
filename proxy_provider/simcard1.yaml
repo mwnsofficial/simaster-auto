@@ -1,18 +1,25 @@
 proxies:
-- name: akunA
-  type: trojan
-  server: sg-3.test3.net
-  port: 443
-  password: 5693db20-a93e-11ed-b9a0-1239d0255272
-  udp: true
-  sni: app.ruangguru.com
-  skip-cert-verify: true
-- name: akunB
+- name: akun1
   type: trojan
   server: sg2-trojan.bonds.id
   port: 443
-  password: 853e7ea0-a93d-11ed-b3d4-1239d0255272
+  password: 4dfe3db0-bb1f-11ed-ab95-1239d0255272
   udp: true
-  sni: io.ruangguru.com
+  sni: me.ruangguru.com
   skip-cert-verify: true
-
+- name: Vmess WS
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 6988ada2-c510-487e-818c-e801fdc46a88
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: sg6.v2rayserv.com
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: sg6.v2rayserv.com
